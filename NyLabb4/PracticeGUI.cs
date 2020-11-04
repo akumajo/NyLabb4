@@ -7,7 +7,7 @@ using WordLibrary;
 
 namespace NyLabb4
 {
-    class PracticeForms
+    class PracticeGUI
     {
         static public float AmountOfRightGuesses { get; set; }
         static public float AmountOfTotalGuesses { get; set; }
@@ -17,7 +17,7 @@ namespace NyLabb4
         private string fromThisLanguage;
         private string toThisLanguage;
 
-        public PracticeForms(Word _randomWord, WordList _loadedList)
+        public PracticeGUI(Word _randomWord, WordList _loadedList)
         {
             theRandomWord = _randomWord.Translations[_randomWord.FromLanguage];
             correctGuess = _randomWord.Translations[_randomWord.ToLanguage];

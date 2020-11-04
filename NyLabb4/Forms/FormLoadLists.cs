@@ -13,7 +13,6 @@ namespace NyLabb4
 {
     public partial class FormLoadLists : Form
     {
-        FormCreateNewList createNewList = new FormCreateNewList();
         public WordList LoadedList { get; private set; }
         public event EventHandler ButtonSelectClicked;
 
@@ -56,6 +55,7 @@ namespace NyLabb4
 
         private void buttonNewList_Click(object sender, EventArgs e)
         {
+            FormCreateNewList createNewList = new FormCreateNewList();
             createNewList.ShowDialog();
         }
 

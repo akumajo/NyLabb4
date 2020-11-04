@@ -70,7 +70,7 @@
     <Compile Include="Forms\FormLoadLists.Designer.cs">
       <DependentUpon>FormLoadLists.cs</DependentUpon>
     </Compile>
-    <Compile Include="PracticeForms.cs" />
+    <Compile Include="PracticeGUI.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserControls\UserControlPrintSelectedList.cs">

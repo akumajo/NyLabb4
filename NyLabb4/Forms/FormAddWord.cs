@@ -21,12 +21,17 @@ namespace NyLabb4
             InitializeComponent();
         }
 
-        public void PrintLanguagesDataGrid(WordList loadedList)
+        public void PrintDataGrids(WordList loadedList)
         {
-            SetupPrintLanguagesDataGrid();
-
             LoadedList = loadedList;
 
+            SetupLanguagesDataGrid();
+            FillLanguagesDataGrid(loadedList);
+            SetupTranslationDataGrid();
+            FillTranslationsDataGrid(loadedList);
+        }
+        private void FillLanguagesDataGrid(WordList loadedList)
+        {
             for (int i = 0; i < loadedList.Languages.Length; i++)
             {
                 dataGridView1.Rows.Add(loadedList.Languages[i].ToUpper());
@@ -34,10 +39,8 @@ namespace NyLabb4
             }
         }
 
-        public void AddTranslationsDataGrid(WordList loadedList)
+        private void FillTranslationsDataGrid(WordList loadedList)
         {
-            SetupTranslationDataGrid();
-
             for (int i = 0; i < loadedList.Languages.Length; i++)
             {
                 dataGridView2.Rows.Add();
@@ -92,7 +95,7 @@ namespace NyLabb4
             dataGridView2.Columns.Add("Translation", "Translation");
         }
 
-        private void SetupPrintLanguagesDataGrid()
+        private void SetupLanguagesDataGrid()
         {
             dataGridView1.Rows.Clear();
             dataGridView1.Columns.Clear();

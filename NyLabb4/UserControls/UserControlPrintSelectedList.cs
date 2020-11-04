@@ -57,8 +57,8 @@ namespace NyLabb4
         private void buttonAddWord_Click(object sender, EventArgs e)
         {
             if (LoadedList == null) { return; }
-            addWord.PrintLanguagesDataGrid(LoadedList);
-            addWord.AddTranslationsDataGrid(LoadedList);
+
+            addWord.PrintDataGrids(LoadedList);
             addWord.ShowDialog();
         }
 
@@ -74,6 +74,7 @@ namespace NyLabb4
 
             RemoveWord();
         }
+
         public void RemoveWord()
         {
             int index = dataGridView1.CurrentCell.ColumnIndex;
@@ -90,6 +91,7 @@ namespace NyLabb4
                 PrintToDataGrid(LoadedList);
             }
         }
+
         private void ResetDataGrid()
         {
             dataGridView1.Rows.Clear();

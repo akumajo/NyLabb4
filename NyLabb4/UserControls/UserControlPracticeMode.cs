@@ -14,7 +14,7 @@ namespace NyLabb4
 {
     public partial class UserControlPracticeMode : UserControl
     {
-        PracticeForms practice;
+        PracticeGUI practice;
         public event EventHandler ButtonEndPracticeClicked;
         private WordList LoadedList;
 
@@ -29,7 +29,7 @@ namespace NyLabb4
 
             LoadedList = loadedList;
             var randomWord = LoadedList.GetWordToPractice();
-            practice = new PracticeForms(randomWord, loadedList);
+            practice = new PracticeGUI(randomWord, loadedList);
 
             labelTranslateThisToThis.Text = practice.Play();
             labelShowHowManyWords.Text = practice.PrintTotalScore();
@@ -58,8 +58,8 @@ namespace NyLabb4
 
         public void ResetPractice()
         {
-            PracticeForms.AmountOfTotalGuesses = 0;
-            PracticeForms.AmountOfRightGuesses = 0;
+            PracticeGUI.AmountOfTotalGuesses = 0;
+            PracticeGUI.AmountOfRightGuesses = 0;
         }
     }
 }

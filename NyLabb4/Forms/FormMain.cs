@@ -16,8 +16,8 @@ namespace NyLabb4
         UserControlPrintSelectedList printSelectedList = new UserControlPrintSelectedList();
         UserControlPracticeMode practiceMode = new UserControlPracticeMode();
         FormLoadLists loadList = new FormLoadLists();
-        FormAddWord addWord = new FormAddWord();
-        WordList LoadedList; 
+        
+        public WordList LoadedList { get; private set; }
 
         public FormMain()
         {
@@ -58,7 +58,7 @@ namespace NyLabb4
             practiceMode.Dock = DockStyle.Fill;
         }
 
-        private void AddEvents()
+        public void AddEvents()
         {
             loadList.ButtonSelectClicked += loadList_ButtonSelectClicked;
             printSelectedList.ButtonStartPracticeClicked += printSelectedList_ButtonStartPracticeClicked;
@@ -95,9 +95,10 @@ namespace NyLabb4
         private void addWordToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (LoadedList == null) { return; }
-            addWord.PrintLanguagesDataGrid(LoadedList);
-            addWord.AddTranslationsDataGrid(LoadedList);
+            FormAddWord addWord = new FormAddWord();
+            addWord.PrintDataGrids(LoadedList);
             addWord.ShowDialog();
+
             ShowWordList(LoadedList);
         }
 
