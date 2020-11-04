@@ -17,7 +17,7 @@ namespace NyLabb4
         UserControlPracticeMode practiceMode = new UserControlPracticeMode();
         FormLoadLists loadList = new FormLoadLists();
         FormAddWord addWord = new FormAddWord();
-        WordList LoadedList;
+        WordList LoadedList; 
 
         public FormMain()
         {
@@ -123,6 +123,5 @@ namespace NyLabb4
         {
             loadList.ShowDialog();
         }
-
     }
 }
