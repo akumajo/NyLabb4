@@ -30,27 +30,6 @@ namespace NyLabb4
             SetupTranslationDataGrid();
             FillTranslationsDataGrid(loadedList);
         }
-        private void FillLanguagesDataGrid(WordList loadedList)
-        {
-            for (int i = 0; i < loadedList.Languages.Length; i++)
-            {
-                dataGridView1.Rows.Add(loadedList.Languages[i].ToUpper());
-                dataGridView1.Rows[i].ReadOnly = true;
-            }
-        }
-
-        private void FillTranslationsDataGrid(WordList loadedList)
-        {
-            for (int i = 0; i < loadedList.Languages.Length; i++)
-            {
-                dataGridView2.Rows.Add();
-            }
-        }
-
-        private void buttonConfirmAdd_Click(object sender, EventArgs e)
-        {
-            AddWord();
-        }
 
         private void AddWord()
         {
@@ -111,6 +90,28 @@ namespace NyLabb4
             dataGridView1.DefaultCellStyle.SelectionForeColor = Color.Black;
 
             dataGridView1.Columns.Add("Language", "Language");
+        }
+
+        private void FillLanguagesDataGrid(WordList loadedList)
+        {
+            for (int i = 0; i < loadedList.Languages.Length; i++)
+            {
+                dataGridView1.Rows.Add(loadedList.Languages[i].ToUpper());
+                dataGridView1.Rows[i].ReadOnly = true;
+            }
+        }
+
+        private void FillTranslationsDataGrid(WordList loadedList)
+        {
+            for (int i = 0; i < loadedList.Languages.Length; i++)
+            {
+                dataGridView2.Rows.Add();
+            }
+        }
+
+        private void buttonConfirmAdd_Click(object sender, EventArgs e)
+        {
+            AddWord();
         }
     }
 }

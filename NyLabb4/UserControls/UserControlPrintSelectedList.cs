@@ -23,11 +23,6 @@ namespace NyLabb4
             addWord.AddWordButtonClicked += FormAdd_AddWordButtonClicked;
         }
 
-        private void FormAdd_AddWordButtonClicked(object sender, EventArgs e)
-        {
-            PrintToDataGrid(LoadedList);
-        }
-
         public void PrintToDataGrid(WordList loadedList)
         {
             ResetDataGrid();
@@ -35,44 +30,6 @@ namespace NyLabb4
 
             LoadedList = loadedList;
             LoadedList.List(0, ShowTranslation);
-        }
-
-        private void ShowTranslation(string showTranslation)
-        {
-            string[] translation = showTranslation.Remove(showTranslation.LastIndexOf(';')).Split(';');
-
-            if (dataGridView1.Columns.Count != LoadedList.Languages.Length)
-            {
-                for (int i = 0; i < LoadedList.Languages.Length; i++)
-                {
-                    dataGridView1.Columns.Add(translation[i], translation[i].ToUpper());
-                }
-            }
-            else
-            {
-                dataGridView1.Rows.Add(translation);
-            }
-        }
-
-        private void buttonAddWord_Click(object sender, EventArgs e)
-        {
-            if (LoadedList == null) { return; }
-
-            addWord.PrintDataGrids(LoadedList);
-            addWord.ShowDialog();
-        }
-
-        private void buttonPractice_Click(object sender, EventArgs e)
-        {
-            ButtonStartPracticeClicked?.Invoke(this, null);
-        }
-
-        private void buttonRemove_Click(object sender, EventArgs e)
-        {
-            if (LoadedList == null) { return; }
-            if (LoadedList.Count() < 1) { MessageBox.Show($"This list doesn't contain any words."); return; };
-
-            RemoveWord();
         }
 
         public void RemoveWord()
@@ -105,5 +62,49 @@ namespace NyLabb4
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.AllowUserToAddRows = false;
         }
+
+        private void ShowTranslation(string showTranslation)
+        {
+            string[] translation = showTranslation.Remove(showTranslation.LastIndexOf(';')).Split(';');
+
+            if (dataGridView1.Columns.Count != LoadedList.Languages.Length)
+            {
+                for (int i = 0; i < LoadedList.Languages.Length; i++)
+                {
+                    dataGridView1.Columns.Add(translation[i], translation[i].ToUpper());
+                }
+            }
+            else
+            {
+                dataGridView1.Rows.Add(translation);
+            }
+        }
+
+        private void FormAdd_AddWordButtonClicked(object sender, EventArgs e)
+        {
+            PrintToDataGrid(LoadedList);
+        }
+
+        private void buttonAddWord_Click(object sender, EventArgs e)
+        {
+            if (LoadedList == null) { return; }
+
+            addWord.PrintDataGrids(LoadedList);
+            addWord.ShowDialog();
+        }
+
+        private void buttonPractice_Click(object sender, EventArgs e)
+        {
+            ButtonStartPracticeClicked?.Invoke(this, null);
+        }
+
+        private void buttonRemove_Click(object sender, EventArgs e)
+        {
+            if (LoadedList == null) { return; }
+            if (LoadedList.Count() < 1) { MessageBox.Show($"This list doesn't contain any words."); return; };
+
+            RemoveWord();
+        }
+
     }
 }

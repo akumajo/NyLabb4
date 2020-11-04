@@ -25,6 +25,12 @@ namespace Labb4Console
             toThisLanguage = _loadedList.Languages[_randomWord.ToLanguage];
         }
 
+        public static void ResetPractice()
+        {
+            AmountOfRightGuesses = 0;
+            AmountOfTotalGuesses = 0;
+        }
+
         public void PrintTotalScore()
         {
             PrintAmountOfGuesses();
@@ -50,19 +56,14 @@ namespace Labb4Console
             AmountOfTotalGuesses++;
         }
 
-        private void PrintAmountOfGuesses()
-        {
-            Console.WriteLine($"You practiced {AmountOfTotalGuesses} words.");
-        }
-
         public void Play()
         {
             Console.WriteLine($"Translate the {fromThisLanguage} word '{theRandomWord}' to {toThisLanguage}: ");
         }
-        public static void ResetPractice()
+
+        private void PrintAmountOfGuesses()
         {
-            AmountOfRightGuesses = 0;
-            AmountOfTotalGuesses = 0;
+            Console.WriteLine($"You practiced {AmountOfTotalGuesses} words.");
         }
     }
 }

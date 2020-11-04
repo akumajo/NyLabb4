@@ -35,6 +35,11 @@ namespace NyLabb4
             labelShowHowManyWords.Text = practice.PrintTotalScore();
         }
 
+        public void ResetPractice()
+        {
+            PracticeGUI.ResetPractice();
+        }
+
         private void buttonEndpractice_Click(object sender, EventArgs e)
         {
             ButtonEndPracticeClicked?.Invoke(this, null);
@@ -56,10 +61,5 @@ namespace NyLabb4
             PracticeWords(LoadedList);
         }
 
-        public void ResetPractice()
-        {
-            PracticeGUI.AmountOfTotalGuesses = 0;
-            PracticeGUI.AmountOfRightGuesses = 0;
-        }
     }
 }

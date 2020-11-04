@@ -25,6 +25,17 @@ namespace NyLabb4
             toThisLanguage = _loadedList.Languages[_randomWord.ToLanguage];
         }
 
+        public string Play()
+        {
+            return $"Translate the {fromThisLanguage} word '{theRandomWord}' to {toThisLanguage}";
+        }
+
+        public static void ResetPractice()
+        {
+            AmountOfRightGuesses = 0;
+            AmountOfTotalGuesses = 0;
+        }
+
         public string PrintTotalScore()
         {
             return $"{AmountOfRightGuesses} of {AmountOfTotalGuesses} correct guesses.";
@@ -45,14 +56,5 @@ namespace NyLabb4
             }
         }
 
-        public string Play()
-        {
-            return $"Translate the {fromThisLanguage} word '{theRandomWord}' to {toThisLanguage}";
-        }
-        public static void ResetPractice()
-        {
-            AmountOfRightGuesses = 0;
-            AmountOfTotalGuesses = 0;
-        }
     }
 }

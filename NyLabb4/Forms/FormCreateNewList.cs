@@ -22,16 +22,6 @@ namespace NyLabb4
             InitializeComponent();
         }
 
-        private void buttonCancel_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void buttonAddNewList_Click(object sender, EventArgs e)
-        {
-            CreateNewList();
-        }
-
         private void CreateNewList()
         {
             Regex forbiddenChars = new Regex("[^A-Öa-ö]+");
@@ -60,6 +50,18 @@ namespace NyLabb4
 
             MessageBox.Show($"{ListName} successfully created!");
             Close();
+
         }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void buttonAddNewList_Click(object sender, EventArgs e)
+        {
+            CreateNewList();
+        }
+
     }
 }

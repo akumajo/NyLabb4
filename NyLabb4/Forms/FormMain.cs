@@ -32,24 +32,6 @@ namespace NyLabb4
             ShowWordList(LoadedList);
         }
 
-        private void loadList_ButtonSelectClicked(object sender, EventArgs e)
-        {
-            LoadedList = loadList.LoadedList;
-            ShowWordList(LoadedList);
-        }
-
-        private void practiceMode_ButtonEndPracticeClicked(object sender, EventArgs e)
-        {
-            ShowWordList(LoadedList);
-        }
-
-        private void printSelectedList_ButtonStartPracticeClicked(object sender, EventArgs e)
-        {
-            if (LoadedList == null) { return; }
-            if (LoadedList.Count() < 1) { MessageBox.Show($"This list doesn't contain any words."); return; }
-            ShowPracticeMode(LoadedList);
-        }
-
         private void PanelSetup()
         {
             panel1.Controls.Add(printSelectedList);
@@ -80,6 +62,24 @@ namespace NyLabb4
 
             printSelectedList.Visible = true;
             practiceMode.Visible = false;
+        }
+
+        private void loadList_ButtonSelectClicked(object sender, EventArgs e)
+        {
+            LoadedList = loadList.LoadedList;
+            ShowWordList(LoadedList);
+        }
+
+        private void practiceMode_ButtonEndPracticeClicked(object sender, EventArgs e)
+        {
+            ShowWordList(LoadedList);
+        }
+
+        private void printSelectedList_ButtonStartPracticeClicked(object sender, EventArgs e)
+        {
+            if (LoadedList == null) { return; }
+            if (LoadedList.Count() < 1) { MessageBox.Show($"This list doesn't contain any words."); return; }
+            ShowPracticeMode(LoadedList);
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
