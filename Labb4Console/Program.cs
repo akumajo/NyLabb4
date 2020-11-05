@@ -7,7 +7,6 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using WordLibrary;
 
-
 namespace Labb4Console
 {
     class Program

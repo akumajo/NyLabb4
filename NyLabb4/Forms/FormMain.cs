@@ -24,6 +24,20 @@ namespace NyLabb4
             InitializeComponent();
         }
 
+        private void EnableToolStripItems()
+        {
+            addWordToolStripMenuItem.Enabled = true;
+            deleteWordToolStripMenuItem.Enabled = true;
+            closeToolStripMenuItem.Enabled = true;
+        }
+
+        private void DisableToolStripItems()
+        {
+            addWordToolStripMenuItem.Enabled = false;
+            deleteWordToolStripMenuItem.Enabled = false;
+            closeToolStripMenuItem.Enabled = false;
+        }
+
         private void FormMain_Load(object sender, EventArgs e)
         {
             AddEvents();
@@ -60,6 +74,14 @@ namespace NyLabb4
         {
             printSelectedList.PrintToDataGrid(loadedList);
 
+            if(LoadedList == null)
+            {
+                DisableToolStripItems();
+            }
+            else
+            {
+                EnableToolStripItems();
+            } 
             printSelectedList.Visible = true;
             practiceMode.Visible = false;
         }
@@ -123,6 +145,12 @@ namespace NyLabb4
         private void loadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             loadList.ShowDialog();
+        }
+
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadedList = null;
+            ShowWordList(LoadedList);
         }
     }
 }

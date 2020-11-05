@@ -31,6 +31,7 @@ namespace NyLabb4
         private void LoadLists()
         {
             listBoxLists.Items.Clear();
+            listBoxLanguages.Items.Clear();
             string[] lists = WordList.GetLists();
             for (int i = 0; i < lists.Length; i++)
             {

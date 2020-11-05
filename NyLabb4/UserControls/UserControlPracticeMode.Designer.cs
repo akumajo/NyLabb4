@@ -67,7 +67,7 @@
             this.labelShowHowManyWords.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelShowHowManyWords.Location = new System.Drawing.Point(-24, 190);
             this.labelShowHowManyWords.Name = "labelShowHowManyWords";
-            this.labelShowHowManyWords.Size = new System.Drawing.Size(351, 46);
+            this.labelShowHowManyWords.Size = new System.Drawing.Size(351, 26);
             this.labelShowHowManyWords.TabIndex = 9;
             this.labelShowHowManyWords.Text = "label1";
             this.labelShowHowManyWords.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -75,10 +75,10 @@
             // buttonRestart
             // 
             this.buttonRestart.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonRestart.Location = new System.Drawing.Point(181, 126);
+            this.buttonRestart.Location = new System.Drawing.Point(189, 126);
             this.buttonRestart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonRestart.Name = "buttonRestart";
-            this.buttonRestart.Size = new System.Drawing.Size(92, 25);
+            this.buttonRestart.Size = new System.Drawing.Size(84, 22);
             this.buttonRestart.TabIndex = 8;
             this.buttonRestart.Text = "Restart";
             this.buttonRestart.UseVisualStyleBackColor = true;
@@ -90,7 +90,7 @@
             this.buttonEndpractice.Location = new System.Drawing.Point(30, 126);
             this.buttonEndpractice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonEndpractice.Name = "buttonEndpractice";
-            this.buttonEndpractice.Size = new System.Drawing.Size(92, 25);
+            this.buttonEndpractice.Size = new System.Drawing.Size(84, 22);
             this.buttonEndpractice.TabIndex = 7;
             this.buttonEndpractice.Text = "End Practice";
             this.buttonEndpractice.UseVisualStyleBackColor = true;

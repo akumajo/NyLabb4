@@ -41,10 +41,10 @@
             // 
             // buttonNewList
             // 
-            this.buttonNewList.Location = new System.Drawing.Point(9, 230);
-            this.buttonNewList.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonNewList.Location = new System.Drawing.Point(9, 220);
+            this.buttonNewList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonNewList.Name = "buttonNewList";
-            this.buttonNewList.Size = new System.Drawing.Size(63, 19);
+            this.buttonNewList.Size = new System.Drawing.Size(84, 22);
             this.buttonNewList.TabIndex = 0;
             this.buttonNewList.Text = "New list";
             this.buttonNewList.UseVisualStyleBackColor = true;
@@ -52,10 +52,10 @@
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(299, 230);
-            this.buttonCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonCancel.Location = new System.Drawing.Point(257, 220);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(63, 19);
+            this.buttonCancel.Size = new System.Drawing.Size(84, 22);
             this.buttonCancel.TabIndex = 1;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -63,10 +63,10 @@
             // 
             // buttonSelect
             // 
-            this.buttonSelect.Location = new System.Drawing.Point(366, 230);
-            this.buttonSelect.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonSelect.Location = new System.Drawing.Point(345, 220);
+            this.buttonSelect.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSelect.Name = "buttonSelect";
-            this.buttonSelect.Size = new System.Drawing.Size(63, 19);
+            this.buttonSelect.Size = new System.Drawing.Size(84, 22);
             this.buttonSelect.TabIndex = 2;
             this.buttonSelect.Text = "Select";
             this.buttonSelect.UseVisualStyleBackColor = true;
@@ -76,7 +76,7 @@
             // 
             this.listBoxLists.FormattingEnabled = true;
             this.listBoxLists.Location = new System.Drawing.Point(9, 28);
-            this.listBoxLists.Margin = new System.Windows.Forms.Padding(2);
+            this.listBoxLists.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBoxLists.Name = "listBoxLists";
             this.listBoxLists.Size = new System.Drawing.Size(196, 186);
             this.listBoxLists.TabIndex = 3;
@@ -86,7 +86,7 @@
             // 
             this.listBoxLanguages.FormattingEnabled = true;
             this.listBoxLanguages.Location = new System.Drawing.Point(233, 28);
-            this.listBoxLanguages.Margin = new System.Windows.Forms.Padding(2);
+            this.listBoxLanguages.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBoxLanguages.Name = "listBoxLanguages";
             this.listBoxLanguages.Size = new System.Drawing.Size(196, 186);
             this.listBoxLanguages.TabIndex = 4;
@@ -135,7 +135,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(438, 262);
+            this.ClientSize = new System.Drawing.Size(438, 253);
             this.Controls.Add(this.labelLanguages);
             this.Controls.Add(this.labelWordCounter);
             this.Controls.Add(this.label1);
@@ -146,7 +146,7 @@
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonNewList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormLoadLists";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

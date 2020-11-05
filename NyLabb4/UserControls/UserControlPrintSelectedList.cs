@@ -26,12 +26,14 @@ namespace NyLabb4
         public void PrintToDataGrid(WordList loadedList)
         {
             ResetDataGrid();
+            DisableButtons();
+            LoadedList = loadedList;
             if (loadedList == null) { return; }
 
-            LoadedList = loadedList;
+            EnableButtons();
             LoadedList.List(0, ShowTranslation);
         }
-
+        
         public void RemoveWord()
         {
             int index = dataGridView1.CurrentCell.ColumnIndex;
@@ -47,6 +49,20 @@ namespace NyLabb4
 
                 PrintToDataGrid(LoadedList);
             }
+        }
+
+        private void EnableButtons()
+        {
+            buttonAddWords.Enabled = true;
+            buttonPractice.Enabled = true;
+            buttonRemoveWord.Enabled = true;
+        }
+
+        private void DisableButtons()
+        {
+            buttonAddWords.Enabled = false;
+            buttonPractice.Enabled = false;
+            buttonRemoveWord.Enabled = false;
         }
 
         private void ResetDataGrid()

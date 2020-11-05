@@ -59,8 +59,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.buttonPractice);
             this.splitContainer1.Panel2.Controls.Add(this.buttonRemoveWord);
             this.splitContainer1.Panel2.Controls.Add(this.buttonAddWords);
-            this.splitContainer1.Size = new System.Drawing.Size(702, 501);
-            this.splitContainer1.SplitterDistance = 461;
+            this.splitContainer1.Size = new System.Drawing.Size(624, 417);
+            this.splitContainer1.SplitterDistance = 384;
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -75,13 +75,14 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(702, 461);
+            this.dataGridView1.Size = new System.Drawing.Size(624, 384);
             this.dataGridView1.TabIndex = 2;
             // 
             // buttonPractice
             // 
             this.buttonPractice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonPractice.Location = new System.Drawing.Point(611, 4);
+            this.buttonPractice.Enabled = false;
+            this.buttonPractice.Location = new System.Drawing.Point(532, 2);
             this.buttonPractice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonPractice.Name = "buttonPractice";
             this.buttonPractice.Size = new System.Drawing.Size(84, 22);
@@ -93,7 +94,8 @@
             // buttonRemoveWord
             // 
             this.buttonRemoveWord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRemoveWord.Location = new System.Drawing.Point(512, 4);
+            this.buttonRemoveWord.Enabled = false;
+            this.buttonRemoveWord.Location = new System.Drawing.Point(433, 2);
             this.buttonRemoveWord.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonRemoveWord.Name = "buttonRemoveWord";
             this.buttonRemoveWord.Size = new System.Drawing.Size(84, 22);
@@ -105,7 +107,8 @@
             // buttonAddWords
             // 
             this.buttonAddWords.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAddWords.Location = new System.Drawing.Point(413, 4);
+            this.buttonAddWords.Enabled = false;
+            this.buttonAddWords.Location = new System.Drawing.Point(334, 2);
             this.buttonAddWords.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonAddWords.Name = "buttonAddWords";
             this.buttonAddWords.Size = new System.Drawing.Size(84, 22);
@@ -120,7 +123,7 @@
             this.Controls.Add(this.splitContainer1);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "UserControlPrintSelectedList";
-            this.Size = new System.Drawing.Size(702, 501);
+            this.Size = new System.Drawing.Size(624, 417);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
