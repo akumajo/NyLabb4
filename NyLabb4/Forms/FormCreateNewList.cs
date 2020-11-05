@@ -24,7 +24,7 @@ namespace NyLabb4
 
         private void CreateNewList()
         {
-            Regex forbiddenChars = new Regex("[^A-Öa-ö]+");
+            Regex forbiddenChars = new Regex("[0-9;\r\n]+");
             languages = textBoxLanguages.Text.Split('\n');
             ListName = forbiddenChars.Replace(textBoxListName.Text, "").Trim();
 
@@ -39,7 +39,7 @@ namespace NyLabb4
                 languages[i] = forbiddenChars.Replace(languages[i], "").Trim();
                 if (languages[i] == "")
                 {
-                    MessageBox.Show("Languages can only contain characters from a-ö. Try again.", "Error");
+                    MessageBox.Show("Try again.", "Error");
                     return;
                 }
             }

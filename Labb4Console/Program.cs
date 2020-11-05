@@ -30,9 +30,9 @@ namespace Labb4Console
             GuardClauses.LoadedListReturnsNull(loadedList, args[1]);
 
             bool addWords = true;
-            Regex forbiddenChars = new Regex("[;,.:\n]");
+            Regex forbiddenChars = new Regex("[0-9;\r\n]+");
 
-            while(addWords)
+            while (addWords)
             {
                 string[] translations = new string[loadedList.Languages.Length];
                 for (int i = 0; i < loadedList.Languages.Length; i++)
@@ -206,14 +206,12 @@ namespace Labb4Console
 
         static void CreateNewList(string[] args)
         {
-
             GuardClauses.InputMissingParameters(args);
             WordList newList = new WordList(args[1], args.Skip(2).ToArray());
             newList.Save();
 
             Console.WriteLine($"A new list called {args[1]} was successfully created.");
             AddWords(args);
-            newList.Save();
         }
     }
 }

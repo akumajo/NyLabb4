@@ -33,7 +33,7 @@ namespace NyLabb4
 
         private void AddWord()
         {
-            Regex forbiddenChars = new Regex("[^A-Öa-ö]+");
+            Regex forbiddenChars = new Regex("[0-9;\r\n]+");
             string[] translations = new string[LoadedList.Languages.Length];
 
             for (int i = 0; i < LoadedList.Languages.Length; i++)
@@ -45,7 +45,7 @@ namespace NyLabb4
 
                 if (translations[i] == "")
                 {
-                    MessageBox.Show("Words can only contain characters from a-ö. Try again.", "Error");
+                    MessageBox.Show("Try again.", "Error");
                     return;
                 }
             }
