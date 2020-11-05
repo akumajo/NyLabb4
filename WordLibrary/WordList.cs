@@ -103,7 +103,7 @@ namespace WordLibrary
         {
             var sortedList = words.OrderBy(t => t.Translations[sortByTranslation]).ToList();
 
-            showTranslation($"{String.Join(";", Languages)}{';'}");
+            showTranslation($"{String.Join(";", Languages)}{';'}".ToUpper());
 
             for (int i = 0; i < sortedList.Count; i++)
             {

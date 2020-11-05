@@ -102,14 +102,14 @@ namespace Labb4Console
 
             GuardClauses.LoadedListReturnsNull(loadedList, args[1]);
             GuardClauses.SelectedListDoesntContainWords(loadedList);
-            GuardClauses.SelectedListDoesntContainLanguage(loadedList, args[2]);
-
+            
             if (args.Length < 3)
             {
                 loadedList.List(0, ShowTranslation);
             }
             else
             {
+                GuardClauses.SelectedListDoesntContainLanguage(loadedList, args[2]);
                 string language = args[2];
                 int index = Array.FindIndex(loadedList.Languages, l => l.Contains(language));
                 loadedList.List(index, ShowTranslation);
